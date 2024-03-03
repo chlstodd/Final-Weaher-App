@@ -5,26 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
+    <div class="container">
     <header>
       <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
+        <input 
+        class="search-bar" 
+        type="search" 
+        placeholder="Enter a city..." 
+        required />
+        <input 
+        class="search-button" 
+        type="submit" 
+        value="Search" />
       </form>
     </header>
     <main>
-      <div class="current-conditions">
-      <h1>Current City Placeholder</h1>
+      <div class="city-weather">
+      <div>
+      <h1>Fort Collins</h1>
       <p>Today 12:00
         <br/>
-        Humidity: 100%, Wind: 100 mph</p>
+        Humidity: <strong>100%</strong>, Wind: <strong>100 mph</strong></p>
       </p>
     </div>
-    <div class="current-weather">
-      🌧️ 100&deg;F
+    <div class="current-conditions">
+      <span class="current-emoji">🌧️ </span>
+      <span class="current-temp">100</span>
+      <span class="temp-unit">°F</span>
     </div>
+  </div>
     </main>
     <footer>
       <p>This project was coded by <a
@@ -46,6 +64,7 @@
           rel="noreferrer"
           >hosted on Netlify</a
         ></p>
+      </div>
     </footer>
     <script src="src/index.js"></script>
   </body>
