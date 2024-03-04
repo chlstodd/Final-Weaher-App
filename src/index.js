@@ -21,17 +21,19 @@ function showWeather(response){
   let condition = response.data.condition.description;
   let humidity = response.data.temperature.humidity;
   let windSpeed = response.data.wind.speed;
+  let iconURL = response.data.condition.icon_url;
   let currentCity = document.querySelector("#current-city"); 
   let currentTemp = document.querySelector("#current-temp");
   let cityConditions = document.querySelector("#city-conditions");
   let currentWind = document.querySelector("#wind-speed");
   let currentHumidity = document.querySelector("#humidity");
+  let currentEmoji = document.querySelector("#current-emoji");
 currentCity.innerHTML = `${city}`; 
 currentTemp.innerHTML = `${temp}`;
 cityConditions.innerHTML = `${condition}`;
 currentWind.innerHTML = `${windSpeed}`;
 currentHumidity.innerHTML = `${humidity}`;
-
+currentEmoji.innerHTML = `<img class="weather-icon" src="${iconURL}" />`;
 }
 
 let now = new Date();
