@@ -16,30 +16,33 @@
   <body>
     <div class="container">
     <header>
-      <form>
+      <form id="search-form">
         <input 
         class="search-bar" 
         type="search" 
         placeholder="Enter a city..." 
-        required />
+        required
+        id="city-search-input" />
         <input 
         class="search-button" 
         type="submit" 
-        value="Search" />
+        value="Search"
+        id="search-button" />
       </form>
     </header>
     <main>
       <div class="city-weather">
       <div>
-      <h1>Fort Collins</h1>
-      <p>Today 12:00
+      <h1 id="current-city">Fort Collins</h1>
+      <p>
+        <span id="current-time">Today 12:00</span>, <span id="city-conditions">moderate rain</span>
         <br/>
-        Humidity: <strong>100%</strong>, Wind: <strong>100 mph</strong></p>
+        Humidity: <strong><span id="humidity">100</span>%</strong>, Wind: <strong><span id=wind-speed>100</span> mph</strong></p>
       </p>
     </div>
     <div class="current-conditions">
-      <span class="current-emoji">🌧️ </span>
-      <span class="current-temp">100</span>
+      <span class="current-emoji" id="current-emoji">🌧️ </span>
+      <span class="current-temp" id="current-temp">100</span>
       <span class="temp-unit">°F</span>
     </div>
   </div>
